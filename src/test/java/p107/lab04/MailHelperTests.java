@@ -3,7 +3,7 @@ package p107.lab04;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import p107.lab04.refactoring.Mail;
+import p107.lab04.refactoring.DBManager;
 import p107.lab04.refactoring.MailHelper;
 
 public class MailHelperTests {
@@ -16,7 +16,7 @@ public class MailHelperTests {
 
     @BeforeEach
     public void setMail() {
-        mailHelper = new MailHelper();
+        mailHelper = new MailHelper(new DBManager());
         mailHelper.setMail(to, subject, body);
     }
 
